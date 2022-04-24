@@ -5,8 +5,10 @@ public class GameManagement : MonoBehaviour
 {
     bool gameHasEnded = false;
 
-    public float restartDelay = 1f;
+    public GameObject finishLevelUI;
 
+    public float restartDelay = 1f;
+        
     public void GameOver()
     {
         if(gameHasEnded == false)
@@ -21,4 +23,10 @@ public class GameManagement : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
+
+    public void FinishLevel()
+    {
+        finishLevelUI.SetActive(true);        
+    }
+        
 }
