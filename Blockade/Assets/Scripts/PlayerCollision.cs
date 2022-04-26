@@ -11,6 +11,8 @@ public class PlayerCollision : MonoBehaviour
         {
             movement.enabled = false;
             FindObjectOfType<GameManagement>().GameOver();
+
+            FindObjectOfType<AudioManager>().Play("hurdleCollision");
         }
     }
 }
