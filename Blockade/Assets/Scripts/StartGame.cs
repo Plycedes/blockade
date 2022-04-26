@@ -7,5 +7,6 @@ public class StartGame : MonoBehaviour
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         Time.timeScale = 1;
+        FindObjectOfType<AudioManager>().Play("menuClick");
     }
 }

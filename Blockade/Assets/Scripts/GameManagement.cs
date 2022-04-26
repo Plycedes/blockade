@@ -16,6 +16,7 @@ public class GameManagement : MonoBehaviour
             gameHasEnded = true;
             Debug.Log("Game Over!");
             Invoke("Restart", restartDelay);
+            FindObjectOfType<AudioManager>().Play("Error");
         }        
     }
 
